@@ -9,60 +9,11 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/style.css') }}" />        
+
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -77,19 +28,62 @@
                 </div>
             @endif
 
+            
+        </div>
+    <section class="intro">
+        <div class="inner">
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <div class="content-left">
+                    <div class="content-left-body">
+                        <figure>                            
+                            <img class="content-left-body-img" src="{{ url('/img/maching.png') }}" width="150">
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                        </figure>
+                    </div>
+                    
                 </div>
+                <div class="content-right">
+                    <div class="content-right-head">
+                        <div class="content-right-head-nav">
+                            <i class="fas fa-bars"></i>
+                        </div>  
+                        <div class="content-right-head-nav-title">
+                            <span>Iniciar Sesión</span> 
+                        </div>
+                        
+                        <i class="far fa-user fa-4x fa-white"></i>                                                                      
+                    </div>
+                    <div class="content-right-body">
+                        <div class="container">
+                            <div class="prob">
+                                <form action="/action_page.php" method="get"> 
+                                    <label>Usuario</label>  
+                                    <input type="text" name="user" class="form-login form-login-bg form-login-user" autofocus="true" minlength="3" maxlength="15" required="true" tabindex="0">
+                                    <br>
+                                    <label>Contraseña</label>   
+                                    <input type="password" name="user" class="form-login form-login-bg form-login-contasena" required="true">
+                                    
+                                    <label class="container-ckb">Recuérdame
+                                      <input type="checkbox">
+                                      <span class="checkmark"></span>
+                                    </label>        
+
+                                        
+                                    <div class="prob-send">
+                                        <button type="submit" class="prob-send-btn">Iniciar Sesión</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="content-right-footer">
+                        <!-- <small>ol</small> -->
+                    </div>
+                </div>              
+            
             </div>
         </div>
+    </section>        
     </body>
 </html>
